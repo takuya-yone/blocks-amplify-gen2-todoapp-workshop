@@ -2,7 +2,7 @@ import { Scope, AuthCognito, DistributedTable,ApiNamespace,Agent,BedrockModels }
 import { z } from 'zod';// import { KVStore } from '@aws-blocks/bb-kv-store';
 // import { CognitoVerifier } from './cognito-verifier.js';
 
-const scope = new Scope('todo');
+const scope = new Scope('todo-app');
 
 
 
