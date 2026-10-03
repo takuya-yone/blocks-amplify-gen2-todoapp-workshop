@@ -6,6 +6,8 @@
 // ============================================================
 
 import { ApiNamespaceClient as __BLOCKS_ApiNamespaceClient__ } from '@aws-blocks/blocks/client';
+import '@aws-blocks/bb-file-bucket/middleware';
+import '@aws-blocks/bb-realtime/mock-middleware';
 
 export const api = __BLOCKS_ApiNamespaceClient__('api');
 export const authApi = __BLOCKS_ApiNamespaceClient__('authApi');
