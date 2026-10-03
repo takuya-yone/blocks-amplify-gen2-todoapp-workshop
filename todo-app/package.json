@@ -1,0 +1,41 @@
+{
+  "name": "todo-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "sandbox": "cross-env NODE_OPTIONS=\"--conditions=cdk\" AMPLIFY_SANDBOX=true npx ampx sandbox",
+    "sandbox:delete": "cross-env NODE_OPTIONS=\"--conditions=cdk\" npx ampx sandbox delete --yes",
+    "blocks:dev": "tsx watch aws-blocks/scripts/server.ts",
+    "blocks:generate-client": "cross-env NODE_OPTIONS=\"--conditions=aws-runtime\" tsx aws-blocks/scripts/generate-client.ts"
+  },
+  "dependencies": {
+    "aws-amplify": "^6.22.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "@aws-blocks/blocks": "*"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.25.1",
+    "@aws-amplify/backend-cli": "^1.10.0",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "aws-cdk-lib": "^2.270.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.28.2",
+    "oxlint": "^1.85.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "cross-env": "^10.1.0"
+  },
+  "workspaces": [
+    "aws-blocks"
+  ]
+}
